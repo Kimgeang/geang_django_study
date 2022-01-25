@@ -1,7 +1,7 @@
 #user/models.py
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
+from django.conf import settings
 
 # Create your models here.
 class UserModel(AbstractUser):
@@ -19,7 +19,7 @@ class UserModel(AbstractUser):
     # updated_at = models.DateTimeField(auto_now=True)
     # 유저 상태 메세지
     bio = models.CharField(max_length=256, default='')
-
+    follow = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='followee')
 
 
     #django 모델 필드의 종류
