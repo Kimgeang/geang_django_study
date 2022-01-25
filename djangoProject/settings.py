@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tweet',
     'user',
+    'restaurant',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# mySpartaSns/settings.
+# 장고가 기본적으로 제공하고있는 데이터를 수정하여 사용하기위해 AUTH_USER_MODEL에 user.UserModel의 클래스를
+# 사용할것이다라고 지정해주는 변수
+
+AUTH_USER_MODEL = 'user.UserModel'

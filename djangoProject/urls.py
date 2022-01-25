@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/',views.base_response, name = 'first_test'),
     path('first/',views.first_view, name ='first_view'),
-    path('',include('user.urls')),
+    path('', include('user.urls')),
+    path('', include('tweet.urls')),
 ]

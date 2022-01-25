@@ -10,7 +10,6 @@ class TweetModel(models.Model):
     # 작성자
     # ForeignKey - 다른데이터 베이스에 데이터를 가지고 오겠다라는 명령어
     author = models.ForeignKey(UserModel, on_delete=models.CASCADE)
-
     content = models.CharField(max_length=256)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
